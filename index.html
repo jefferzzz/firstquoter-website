@@ -1,85 +1,430 @@
 <!DOCTYPE html>
+<!-- Styles: style.css -->
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FirstQuoter — Quoting & Invoicing for UK Tradespeople</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background: #f8f9fa;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      padding: 24px;
-    }
-    .card {
-      background: white;
-      border-radius: 16px;
-      padding: 56px 48px;
-      max-width: 520px;
-      width: 100%;
-      text-align: center;
-      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
-    }
-    .logo-img {
-      max-width: 200px;
-      height: auto;
-      margin-bottom: 16px;
-    }
-    .tagline {
-      font-size: 15px;
-      color: #64748b;
-      margin-bottom: 32px;
-      font-weight: 500;
-      letter-spacing: 0.3px;
-    }
-    .divider {
-      width: 40px;
-      height: 3px;
-      background: #0ea5e9;
-      border-radius: 2px;
-      margin: 0 auto 32px;
-    }
-    .headline {
-      font-size: 22px;
-      font-weight: 700;
-      color: #1a1a1a;
-      line-height: 1.35;
-      margin-bottom: 16px;
-    }
-    .description {
-      font-size: 15px;
-      color: #64748b;
-      line-height: 1.7;
-      margin-bottom: 40px;
-    }
-    .badge {
-      display: inline-block;
-      background: #f0f9ff;
-      color: #0ea5e9;
-      border: 1px solid #bae6fd;
-      border-radius: 20px;
-      padding: 8px 20px;
-      font-size: 13px;
-      font-weight: 600;
-      letter-spacing: 0.3px;
-    }
-  </style>
+  <title>FirstQuoter — Quoting &amp; Invoicing for UK Tradespeople</title>
+  <meta name="description" content="Professional quotes and invoices for UK tradespeople. Send branded PDFs from your phone in minutes. Built for electricians, plumbers, builders, and decorators." />
+  <meta property="og:title" content="FirstQuoter — Quote it. Send it. Win it." />
+  <meta property="og:description" content="Professional quotes and invoices for UK tradespeople. Sent from your phone in minutes." />
+  <meta property="og:url" content="https://firstquoter.com/" />
+  <meta property="og:type" content="website" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="card">
-    <img src="FQ Main Logo.png" alt="FirstQuoter" class="logo-img" />
-    <div class="tagline">Quote it. Send it. Win it.</div>
-    <div class="divider"></div>
-    <div class="headline">Quoting &amp; invoicing built for UK tradespeople</div>
-    <p class="description">
-      Professional quotes and invoices for electricians, plumbers,<br>
-      builders, decorators and more. Sent in minutes, straight from your phone.
-    </p>
-    <div class="badge">🚀 Launching soon</div>
+
+<!-- ===== NAV ===== -->
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="FQ Main Logo.png" alt="FirstQuoter" height="32" />
+    </a>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="terms.html">Terms</a></li>
+      </ul>
+      <div class="nav-badges">
+        <!-- TODO: Add App Store link when live -->
+        <a href="#" class="store-badge" aria-label="Download on the App Store">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="17" height="20">
+            <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+          </svg>
+          <div class="store-badge-text">
+            <span class="store-badge-sub">Download on the</span>
+            <span class="store-badge-name">App Store</span>
+          </div>
+        </a>
+        <!-- TODO: Add Google Play link when live -->
+        <a href="#" class="store-badge" aria-label="Get it on Google Play">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="17" height="17">
+            <path d="M3.18 23.76c.32.18.68.2 1.03.06l12.35-7.13-2.96-2.97-10.42 10.04z" fill="#34A853"/>
+            <path d="M22.15 10.55l-2.56-1.46L16.4 12l3.2 3.2 2.57-1.49c.74-.43.74-1.73-.02-2.16z" fill="#FBBC05"/>
+            <path d="M4.21.18L16.56 7.3l-2.96 2.97L3.18.24A1.18 1.18 0 0 1 4.21.18z" fill="#EA4335"/>
+            <path d="M3.18.24C2.45.67 2 1.42 2 2.34v19.32c0 .92.45 1.67 1.18 2.1l10.42-11.76L3.18.24z" fill="#4285F4"/>
+          </svg>
+          <div class="store-badge-text">
+            <span class="store-badge-sub">Get it on</span>
+            <span class="store-badge-name">Google Play</span>
+          </div>
+        </a>
+      </div>
+    </div>
+    <button class="nav-hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
   </div>
+  <div class="nav-mobile-menu" id="mobile-menu">
+    <ul class="nav-links">
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="privacy.html">Privacy</a></li>
+      <li><a href="terms.html">Terms</a></li>
+    </ul>
+    <div class="nav-badges">
+      <!-- TODO: Add App Store link when live -->
+      <a href="#" class="store-badge" aria-label="Download on the App Store">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="17" height="20">
+          <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+        </svg>
+        <div class="store-badge-text">
+          <span class="store-badge-sub">Download on the</span>
+          <span class="store-badge-name">App Store</span>
+        </div>
+      </a>
+      <!-- TODO: Add Google Play link when live -->
+      <a href="#" class="store-badge" aria-label="Get it on Google Play">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="17" height="17">
+          <path d="M3.18 23.76c.32.18.68.2 1.03.06l12.35-7.13-2.96-2.97-10.42 10.04z" fill="#34A853"/>
+          <path d="M22.15 10.55l-2.56-1.46L16.4 12l3.2 3.2 2.57-1.49c.74-.43.74-1.73-.02-2.16z" fill="#FBBC05"/>
+          <path d="M4.21.18L16.56 7.3l-2.96 2.97L3.18.24A1.18 1.18 0 0 1 4.21.18z" fill="#EA4335"/>
+          <path d="M3.18.24C2.45.67 2 1.42 2 2.34v19.32c0 .92.45 1.67 1.18 2.1l10.42-11.76L3.18.24z" fill="#4285F4"/>
+        </svg>
+        <div class="store-badge-text">
+          <span class="store-badge-sub">Get it on</span>
+          <span class="store-badge-name">Google Play</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+
+      <!-- Left: text -->
+      <div class="hero-text">
+        <div class="hero-label">
+          <span class="pill pill-blue">Built for UK Tradespeople 🇬🇧</span>
+        </div>
+        <h1 class="hero-h1">Quote it.<br>Send it.<br>Win it.</h1>
+        <p class="hero-sub">Professional quotes and invoices, sent from your phone in minutes. No paperwork. No chasing. Just more jobs won.</p>
+
+        <div class="hero-cta">
+          <!-- TODO: Add App Store link when live -->
+          <a href="#" class="store-badge store-badge-lg" aria-label="Download on the App Store">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="20" height="24">
+              <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+            </svg>
+            <div class="store-badge-text">
+              <span class="store-badge-sub">Download on the</span>
+              <span class="store-badge-name">App Store</span>
+            </div>
+          </a>
+          <!-- TODO: Add Google Play link when live -->
+          <a href="#" class="store-badge store-badge-lg" aria-label="Get it on Google Play">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
+              <path d="M3.18 23.76c.32.18.68.2 1.03.06l12.35-7.13-2.96-2.97-10.42 10.04z" fill="#34A853"/>
+              <path d="M22.15 10.55l-2.56-1.46L16.4 12l3.2 3.2 2.57-1.49c.74-.43.74-1.73-.02-2.16z" fill="#FBBC05"/>
+              <path d="M4.21.18L16.56 7.3l-2.96 2.97L3.18.24A1.18 1.18 0 0 1 4.21.18z" fill="#EA4335"/>
+              <path d="M3.18.24C2.45.67 2 1.42 2 2.34v19.32c0 .92.45 1.67 1.18 2.1l10.42-11.76L3.18.24z" fill="#4285F4"/>
+            </svg>
+            <div class="store-badge-text">
+              <span class="store-badge-sub">Get it on</span>
+              <span class="store-badge-name">Google Play</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="hero-trust">
+          <span class="hero-trust-item"><span class="hero-trust-check">✓</span> Free to start</span>
+          <span class="hero-trust-item"><span class="hero-trust-check">✓</span> No card required</span>
+          <span class="hero-trust-item"><span class="hero-trust-check">✓</span> Cancel anytime</span>
+        </div>
+      </div>
+
+      <!-- Right: phone mockup -->
+      <div class="phone-outer">
+
+        <!-- Notification toast -->
+        <div class="notification-toast" aria-hidden="true">
+          <div class="toast-check">✓</div>
+          <div>
+            <div class="toast-text-title">Quote accepted</div>
+            <div class="toast-text-sub">James Mitchell</div>
+          </div>
+        </div>
+
+        <!-- Phone frame -->
+        <div class="phone-frame">
+          <div class="phone-notch"></div>
+          <div class="phone-screen">
+
+            <!-- App top bar -->
+            <div class="app-topbar">
+              <span class="app-topbar-title">Quotes</span>
+              <div class="app-add-btn" aria-hidden="true">+</div>
+            </div>
+
+            <!-- Quote cards -->
+            <div class="quote-cards-list">
+
+              <div class="qcard">
+                <div class="qcard-top">
+                  <span class="qcard-ref">QUO-001</span>
+                </div>
+                <div class="qcard-title">Bathroom Refurb</div>
+                <div class="qcard-customer">James Mitchell</div>
+                <div class="qcard-bottom">
+                  <span class="qcard-amount">£1,850.00 + VAT</span>
+                  <span class="qcard-status status-accepted">Accepted</span>
+                </div>
+              </div>
+
+              <div class="qcard">
+                <div class="qcard-top">
+                  <span class="qcard-ref">QUO-002</span>
+                </div>
+                <div class="qcard-title">Consumer Unit Replacement</div>
+                <div class="qcard-customer">Sarah Thompson</div>
+                <div class="qcard-bottom">
+                  <span class="qcard-amount">£420.00</span>
+                  <span class="qcard-status status-sent">Sent</span>
+                </div>
+              </div>
+
+              <div class="qcard">
+                <div class="qcard-top">
+                  <span class="qcard-ref">QUO-003</span>
+                </div>
+                <div class="qcard-title">Fence &amp; Gate Installation</div>
+                <div class="qcard-customer">Robert Harris</div>
+                <div class="qcard-bottom">
+                  <span class="qcard-amount">£680.00 + VAT</span>
+                  <span class="qcard-status status-draft">Draft</span>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Bottom tab bar -->
+            <div class="app-tabbar" aria-hidden="true">
+              <div class="app-tab active">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" stroke-linecap="round" stroke-linejoin="round"/>
+                  <polyline points="14 2 14 8 20 8" stroke-linecap="round" stroke-linejoin="round"/>
+                  <line x1="16" y1="13" x2="8" y2="13" stroke-linecap="round"/>
+                  <line x1="16" y1="17" x2="8" y2="17" stroke-linecap="round"/>
+                  <polyline points="10 9 9 9 8 9" stroke-linecap="round"/>
+                </svg>
+                <span class="app-tab-label">Quotes</span>
+              </div>
+              <div class="app-tab">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <rect x="9" y="3" width="6" height="4" rx="1" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="app-tab-label">Invoices</span>
+              </div>
+              <div class="app-tab">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <circle cx="12" cy="7" r="4" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="app-tab-label">Customers</span>
+              </div>
+              <div class="app-tab">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <line x1="12" y1="2" x2="12" y2="22" stroke-linecap="round"/>
+                  <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="app-tab-label">Income</span>
+              </div>
+            </div>
+
+          </div><!-- /phone-screen -->
+        </div><!-- /phone-frame -->
+      </div><!-- /phone-outer -->
+
+    </div><!-- /hero-grid -->
+  </div><!-- /container -->
+</section>
+
+<!-- ===== HOW IT WORKS ===== -->
+<section class="section">
+  <div class="container text-center">
+    <h2 class="section-title">From quote to job won — in minutes</h2>
+    <div class="steps-grid">
+
+      <div class="step-item" style="text-align:center;">
+        <div class="step-number-circle">1</div>
+        <h3 class="step-title">Create your quote</h3>
+        <p class="step-desc">Add your customer, line items, and job details. Includes VAT if you need it.</p>
+      </div>
+
+      <div class="step-item" style="text-align:center;">
+        <div class="step-number-circle">2</div>
+        <h3 class="step-title">Send it professionally</h3>
+        <p class="step-desc">Your customer receives a branded PDF by email with a link to accept online.</p>
+      </div>
+
+      <div class="step-item" style="text-align:center;">
+        <div class="step-number-circle">3</div>
+        <h3 class="step-title">Win the job</h3>
+        <p class="step-desc">They sign digitally. You get notified instantly. Job's yours.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== FEATURES ===== -->
+<section class="section section-bg-light">
+  <div class="container text-center">
+    <h2 class="section-title">Everything you need. Nothing you don't.</h2>
+    <div class="features-grid">
+
+      <div class="feature-card">
+        <div class="feature-icon">📄</div>
+        <h3 class="feature-title">Professional PDF quotes</h3>
+        <p class="feature-desc">Clean, branded quotes generated instantly and sent directly to your customer.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">🧾</div>
+        <h3 class="feature-title">Invoices too</h3>
+        <p class="feature-desc">Convert a quote to an invoice in one tap. Track what's paid, what's outstanding.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">✍️</div>
+        <h3 class="feature-title">Digital acceptance</h3>
+        <p class="feature-desc">Your customer reviews and signs online. No printing, no scanning.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">📬</div>
+        <h3 class="feature-title">Instant notifications</h3>
+        <p class="feature-desc">Know the moment your quote is opened or accepted.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">💷</div>
+        <h3 class="feature-title">Income tracking</h3>
+        <p class="feature-desc">See your earnings at a glance. Filtered by UK tax year.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">🆓</div>
+        <h3 class="feature-title">Free to start</h3>
+        <p class="feature-desc">Your first 10 documents are free. No card required.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== BUILT FOR YOUR TRADE ===== -->
+<section class="section">
+  <div class="container text-center">
+    <h2 class="section-title">Built for the trades</h2>
+    <p class="section-sub">Designed around how tradespeople actually work.</p>
+
+    <div class="trades-grid">
+
+      <div class="trade-card" style="text-align:left;">
+        <div class="trade-icon">⚡</div>
+        <h3 class="trade-title">Electricians</h3>
+        <p class="trade-desc">Quote consumer unit upgrades, rewires, and EV charger installs in seconds.</p>
+      </div>
+
+      <div class="trade-card" style="text-align:left;">
+        <div class="trade-icon">🔧</div>
+        <h3 class="trade-title">Plumbers</h3>
+        <p class="trade-desc">From boiler replacements to bathroom fits — professional quotes every time.</p>
+      </div>
+
+      <div class="trade-card" style="text-align:left;">
+        <div class="trade-icon">🏗️</div>
+        <h3 class="trade-title">Builders</h3>
+        <p class="trade-desc">Handle multi-line quotes for larger jobs. Add VAT where needed.</p>
+      </div>
+
+      <div class="trade-card" style="text-align:left;">
+        <div class="trade-icon">🎨</div>
+        <h3 class="trade-title">Decorators</h3>
+        <p class="trade-desc">Look more professional than the competition before the job even starts.</p>
+      </div>
+
+    </div>
+
+    <p class="trades-footer"><em>…and any sole trader who sends quotes.</em></p>
+  </div>
+</section>
+
+<!-- ===== PRICING CTA ===== -->
+<section class="cta-band">
+  <div class="container">
+    <h2>Ready to win more jobs?</h2>
+    <p>Start free. Upgrade when you're ready. Cancel any time.</p>
+    <a href="pricing.html" class="btn btn-white">See pricing →</a>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+
+      <div>
+        <div class="footer-logo">
+          <a href="index.html"><img src="FQ Main Logo.png" alt="FirstQuoter" /></a>
+        </div>
+        <p class="footer-tagline">Quote it. Send it. Win it.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Links</h4>
+        <ul>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Get in touch</h4>
+        <div class="footer-contact">
+          <span class="footer-contact-label">General</span>
+          <a href="mailto:hello@firstquoter.com">hello@firstquoter.com</a>
+          <span class="footer-contact-label">Legal enquiries</span>
+          <a href="mailto:legal@firstquoter.com">legal@firstquoter.com</a>
+        </div>
+      </div>
+
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 FirstQuoter. All rights reserved. FirstQuoter is a trading name of Jeffrey Nathan Green.
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Mobile nav hamburger toggle
+  const hamburger = document.querySelector('.nav-hamburger');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  hamburger.addEventListener('click', function () {
+    const isOpen = mobileMenu.classList.toggle('is-open');
+    hamburger.classList.toggle('is-open', isOpen);
+    hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+
+  // Close menu when a link inside it is clicked
+  mobileMenu.querySelectorAll('a').forEach(function (link) {
+    link.addEventListener('click', function () {
+      mobileMenu.classList.remove('is-open');
+      hamburger.classList.remove('is-open');
+      hamburger.setAttribute('aria-expanded', 'false');
+    });
+  });
+</script>
+
 </body>
 </html>
