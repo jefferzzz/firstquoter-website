@@ -389,6 +389,9 @@
       <p class="section-subtext">Your customer asked three tradespeople. The one who sends a professional quote first usually gets the job. FirstQuoter gets you there in seconds.</p>
     </div>
 
+    <!-- TODO: When video asset is ready, swap inner content based on data-flow-mode. See docs/flow-animation.md -->
+    <div class="flow-animation-wrap" data-flow-mode="static">
+
     <!-- Subsection A: Flow sequence -->
     <div class="flow-grid">
 
@@ -485,6 +488,11 @@
         <div class="flow-label-sub">Saved to your account automatically</div>
       </div>
     </div>
+    <div style="text-align:center;margin-top:36px;">
+      <a href="#hero-download" class="btn-hero-cta">Try FirstQuoter free →</a>
+    </div>
+
+    </div><!-- end flow-animation-wrap -->
 
     <!-- Transition line -->
     <div class="flow-transition">
@@ -660,6 +668,27 @@
     </div>
   </div>
 </footer>
+
+<!-- STICKY MOBILE CTA -->
+<div class="sticky-mobile-cta" id="sticky-mobile-cta" aria-hidden="true">
+  <a href="#hero-download" class="sticky-mobile-cta-btn">Try FirstQuoter free →</a>
+</div>
+
+<script>
+  (function () {
+    var bar = document.getElementById('sticky-mobile-cta');
+    var sentinel = document.querySelector('.how-it-works');
+    if (!bar || !sentinel || !window.IntersectionObserver) return;
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        var visible = entry.isIntersecting;
+        bar.classList.toggle('sticky-mobile-cta--visible', visible);
+        bar.setAttribute('aria-hidden', visible ? 'false' : 'true');
+      });
+    }, { threshold: 0 });
+    observer.observe(sentinel);
+  }());
+</script>
 
 <script>
   const hamburger = document.querySelector('.nav-hamburger');

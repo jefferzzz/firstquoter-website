@@ -1981,3 +1981,49 @@ body {
     box-sizing: border-box;
   }
 }
+
+/* ============================================================
+   STICKY MOBILE CTA BAR (index.html only, <= 768px)
+   ============================================================ */
+.sticky-mobile-cta {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .sticky-mobile-cta {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 200;
+    background: var(--blue);
+    box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.15);
+    padding: 12px 20px;
+    /* Hidden by default — revealed by IntersectionObserver */
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(100%);
+    transition: opacity 0.25s, transform 0.25s;
+  }
+
+  .sticky-mobile-cta--visible {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  .sticky-mobile-cta-btn {
+    display: block;
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 4px 0;
+  }
+
+  body {
+    padding-bottom: 60px;
+  }
+}
