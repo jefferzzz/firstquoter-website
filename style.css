@@ -1950,3 +1950,34 @@ body {
   color: rgba(186, 230, 253, 0.85);
   text-align: center;
 }
+
+/* ============================================================
+   HERO — primary CTA button
+   ============================================================ */
+.btn-hero-cta {
+  display: inline-block;
+  background: var(--blue);
+  color: #fff;
+  font-size: 17px;
+  font-weight: 700;
+  padding: 15px 28px;
+  border-radius: 10px;
+  text-decoration: none;
+  margin-bottom: 20px;
+  transition: background 0.15s, transform 0.1s;
+  scroll-behavior: smooth;
+}
+
+.btn-hero-cta:hover {
+  background: var(--blue-dark);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 640px) {
+  .btn-hero-cta {
+    display: block;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
