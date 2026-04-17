@@ -10,6 +10,9 @@
   <meta property="og:description" content="Simple, honest pricing. Start free, upgrade to Pro when you're ready." />
   <meta property="og:url" content="https://firstquoter.com/pricing.html" />
   <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://firstquoter.com/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://firstquoter.com/og-image.png" />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -161,7 +164,9 @@
     </div>
 
     <!-- PRO CARD -->
-    <div class="pricing-card-pro">
+    <div class="pricing-card-pro" style="overflow:hidden;padding:0;">
+      <div class="pro-launch-ribbon">Launch offer: first year £99 — save £20</div>
+      <div style="padding:32px;">
       <div class="pricing-plan-row">
         <span class="pricing-plan-name-white">Pro</span>
         <span class="pricing-popular-badge">Most Popular</span>
@@ -191,7 +196,7 @@
               <polyline points="1,4 3,6.5 7,1.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
           </div>
-          <span>Everything in the Free plan</span>
+          <span>Xero &amp; QuickBooks export <em>(coming soon)</em></span>
         </li>
         <li class="pricing-feature-item-white">
           <div class="tick-badge-sm">
@@ -212,6 +217,8 @@
       </ul>
       <!-- TODO: Add App Store link when live -->
       <a href="#" class="btn-white-full">Download the app</a>
+      <p class="pro-social-proof">Most tradespeople upgrade after 2–3 quotes.</p>
+    </div>
     </div>
 
   </div>

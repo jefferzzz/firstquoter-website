@@ -1929,3 +1929,24 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
+/* ============================================================
+   PRO CARD — launch ribbon & social proof line
+   ============================================================ */
+.pro-launch-ribbon {
+  background: #025d8c;
+  color: #bae6fd;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  padding: 8px 16px;
+}
+
+.pro-social-proof {
+  margin-top: 12px;
+  font-size: 12px;
+  font-style: italic;
+  color: rgba(186, 230, 253, 0.85);
+  text-align: center;
+}
